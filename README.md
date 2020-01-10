@@ -10,15 +10,16 @@ Normal Map Generator is a tool written in Python
 
 ## Usage
 
-./normal_map_generator.py input_file output_file --smooth SMOOTH_VALUE -- intensity INTENSITY_VALUE
+#### Batch entire directory with height maps:
+  `for file in *.jpg; do python3 normal_map_generator.py "$file"; done`
+
+#### Single file:
+./normal_map_generator.py input_file --smooth SMOOTH_VALUE -- intensity INTENSITY_VALUE
 
 ### Required arguments:
 
 #### input_file            
 input image path
-
-#### output_file          
-output image path
 
 ### Optional arguments:
 
