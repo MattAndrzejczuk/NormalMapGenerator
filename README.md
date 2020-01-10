@@ -1,4 +1,4 @@
-# Normal Map Generator
+# Normal Map Batch Generator
 
 Normal Map Generator is a tool written in Python
 
