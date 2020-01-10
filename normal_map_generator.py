@@ -88,7 +88,7 @@ def main():
     parser = argparse.ArgumentParser(description='Compute normal map of an image')
 
     parser.add_argument('input_file', type=str, help='input image path')
-    parser.add_argument('output_file', type=str, help='output image path')
+    #parser.add_argument('output_file', type=str, help='output image path')
     parser.add_argument('-s', '--smooth', default=0., type=float, help='smooth gaussian blur applied on the image')
     parser.add_argument('-it', '--intensity', default=1., type=float, help='intensity of the normal map')
 
@@ -97,8 +97,8 @@ def main():
     sigma = args.smooth
     intensity = args.intensity
     input_file = args.input_file
-    output_file = args.output_file
-
+    #output_file = args.output_file
+    output_file = input_file.replace('Bump','norm').replace('bump','norm') 
     im = ndimage.imread(input_file)
 
     if im.ndim == 3:
